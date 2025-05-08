@@ -1,6 +1,5 @@
 package com.java.example.Dao;
 
-
 import com.java.example.model.Marks;
 import com.java.example.model.StudentDetails;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,4 +28,3 @@ public class StudentDaoImp implements StudentDAO {
                 new Marks(rs.getString("subject"), rs.getInt("marks")));
     }
 }
-

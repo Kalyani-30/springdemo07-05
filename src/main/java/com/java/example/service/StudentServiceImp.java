@@ -1,9 +1,9 @@
 package com.java.example.service;
 
-
 import com.java.example.Dao.StudentDAO;
 import com.java.example.model.Marks;
 import com.java.example.model.StudentDetails;
+import com.java.example.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class StudentServiceImp implements StudentService {
 
-    @Autowired
+    @Autowired  // Injects DAO implementation
     private StudentDAO studentDao;
 
     @Override
@@ -38,5 +38,3 @@ public class StudentServiceImp implements StudentService {
         System.out.println("Result: " + (minMarks >= 35 ? "Pass" : "Fail"));
     }
 }
-
-
